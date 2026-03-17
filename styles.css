@@ -1,0 +1,41 @@
+:root { --primary: #00ff88; --dark-blue: #0f172a; --dark-grey: #1e293b; --text: #ffffff; }
+body { font-family: 'Inter', sans-serif; background-color: var(--dark-blue); color: var(--text); margin: 0; }
+
+/* HEADER Y LOGO */
+header { background: rgba(0,0,0,0.6); padding: 1rem; text-align: center; border-bottom: 2px solid var(--primary); cursor: pointer; }
+header h1 { margin: 0; font-weight: 800; color: #ffffff; letter-spacing: -1px; }
+header h1 span { color: var(--primary); }
+
+.container { padding: 10px; max-width: 1200px; margin: 0 auto; }
+
+/* TABLA COMPACTA */
+.table-wrapper { background: var(--dark-grey); border-radius: 10px; overflow-x: auto; border: 1px solid rgba(0, 255, 136, 0.1); margin-bottom: 20px; }
+table { width: 100%; border-collapse: collapse; min-width: 550px; font-size: 0.8rem; }
+th { background: rgba(0,0,0,0.3); color: var(--primary); padding: 8px 4px; font-size: 0.65rem; text-transform: uppercase; }
+td { padding: 6px 4px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.03); }
+.club-info { display: flex; align-items: center; gap: 8px; text-align: left !important; padding-left: 10px; font-weight: 600; }
+.club-logo-table { width: 18px; height: 18px; object-fit: contain; }
+.pts-highlight { color: var(--primary); font-weight: 800; background: rgba(0, 255, 136, 0.05); }
+th:not(:nth-child(2)), td:not(:nth-child(2)) { width: 32px; }
+
+/* LLAVES COMPLETAS */
+.bracket-wrapper { display: flex; justify-content: center; align-items: center; gap: 15px; min-width: 1100px; padding: 30px 0; overflow-x: auto; }
+.bracket-col { display: flex; flex-direction: column; justify-content: space-around; gap: 15px; height: 500px; }
+.match-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 6px; width: 130px; }
+.match-box input { background: transparent; border: none; color: white; text-align: center; width: 100%; font-size: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.05); margin-bottom: 2px; }
+
+.label-stage { font-size: 0.55rem; font-weight: 800; display: block; text-align: center; margin-bottom: 4px; text-transform: uppercase; border-radius: 2px; padding: 2px; }
+.label-octavos { background: #475569; }
+.label-cuartos { background: #3b82f6; }
+.label-semis { background: #f59e0b; color: #000; }
+.label-final { background: var(--primary); color: #000; }
+
+/* GENERALES */
+.card-form { background: rgba(255,255,255,0.03); padding: 15px; border-radius: 12px; margin: 15px 0; border: 1px solid rgba(255,255,255,0.05); }
+input, select { background: #161e2d; border: 1px solid #2d3748; padding: 10px; border-radius: 6px; color: white; width: 100%; margin-bottom: 10px; font-size: 0.85rem; box-sizing: border-box; }
+.btn-save { background: var(--primary); color: #000; font-weight: 800; border: none; padding: 12px; border-radius: 6px; width: 100%; cursor: pointer; }
+.btn-match { background: #3498db; color: white; border: none; padding: 12px; border-radius: 6px; width: 100%; font-weight: 700; cursor: pointer; }
+.hidden { display: none; }
+.back-btn { background: #000; color: #fff; border: 1px solid var(--primary); padding: 8px 15px; border-radius: 6px; cursor: pointer; margin-bottom: 15px; font-size: 0.75rem; }
+.nav-bar-item { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(0, 255, 136, 0.3); color: white; padding: 15px; border-radius: 10px; cursor: pointer; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+.btn-reset-alt { border-color: #ff4757; color: #ff4757; }

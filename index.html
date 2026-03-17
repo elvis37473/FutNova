@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futnova - Master Suite</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header onclick="showHome()">
+        <h1><span>FUT</span>NOVA</h1>
+    </header>
+
+    <div class="container">
+        <div id="home">
+            <div class="card-form">
+                <h3>🏆 Nuevo Torneo</h3>
+                <input type="text" id="leagueName" placeholder="Nombre del torneo">
+                <input type="text" id="leagueLogo" placeholder="URL del Logo del Torneo">
+                <select id="leagueMode">
+                    <option value="liga">Modo Liga (Puntos)</option>
+                    <option value="eliminatoria">Modo Eliminatoria (Llaves)</option>
+                </select>
+                <button class="btn-save" onclick="addLeague()">Crear Torneo</button>
+            </div>
+            <div class="nav-bars">
+                <button class="nav-bar-item" onclick="renderLeaguesList()">📂 Mis Proyectos</button>
+                <button class="nav-bar-item btn-reset-alt" onclick="resetApp()">🗑️ Borrar Todo</button>
+            </div>
+        </div>
+
+        <div id="leagues-list" class="hidden">
+            <button class="back-btn" onclick="showHome()">← Volver</button>
+            <div id="leagues-container"></div>
+        </div>
+
+        <div id="league-detail" class="hidden">
+            <button class="back-btn" onclick="renderLeaguesList()">← Volver</button>
+            <div id="main-view"></div>
+
+            <div id="liga-controls" class="hidden">
+                <div class="card-form">
+                    <h4 style="color:var(--primary); margin-bottom:10px; font-size:0.9rem;">⚽ REGISTRAR RESULTADO</h4>
+                    <div style="display:flex; gap:5px; align-items:center; margin-bottom:10px;">
+                        <select id="hSelect"></select>
+                        <input type="number" id="hG" value="0" style="width:50px; margin-bottom:0;">
+                        <span style="font-weight:800; color:var(--primary)">VS</span>
+                        <input type="number" id="aG" value="0" style="width:50px; margin-bottom:0;">
+                        <select id="aSelect"></select>
+                    </div>
+                    <button class="btn-match" onclick="registerMatch()">Actualizar Tabla</button>
+                </div>
+
+                <div class="card-form">
+                    <h4 style="color:var(--primary); margin-bottom:10px; font-size:0.9rem;">➕ AÑADIR EQUIPO</h4>
+                    <input type="text" id="tName" placeholder="Nombre del equipo">
+                    <input type="text" id="tLogo" placeholder="URL del Escudo (Opcional)">
+                    <button class="btn-save" onclick="addTeam()">Guardar Equipo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
